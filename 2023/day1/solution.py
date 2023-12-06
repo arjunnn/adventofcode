@@ -25,7 +25,8 @@ def part_two():
     for line in get_input_lines_from_file():
         matches = pattern.findall(line)
         value = int(
-            ''.join([number_map[number] if len(number) > 1 else number for number in [matches[0], matches[-1]]]))
+            "".join([number_map[number] if len(number) > 1 else number for number in [matches[0], matches[-1]]])
+        )
         # print(f"{line} -> {matches} -> {[matches[0], matches[-1]]} -> {value}")
         value_total += value
     return value_total
